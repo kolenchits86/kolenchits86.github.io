@@ -1,0 +1,404 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+header, section, footer
+	background-size: cover
+	&  *
+		z-index: 3
+
+header
+	position: relative
+	width: 100%
+	height: 100vh
+	min-height: 300px
+
+	min-height: 600px
+.overflow
+	&::before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		background: linear-gradient(90deg, rgba(#2e2a4e, .9) , rgba(#503f76, .9));
+		background-color: rgba(#30235f, .1)
+		z-index: 1;
+	ul
+		margin-top: 12px
+ul
+	margin: 0
+	padding: 0
+	list-style-type: none
+	li
+		a
+			color: #0fafaf
+			padding: 10px
+			transition: all .5s ease
+			&:hover
+				color: $accent
+	li.active
+		a
+			color: $accent
+
+.mm-listitem a, .mm-listitem 
+	a
+		&:hover
+			color: rgba(#0fafaf, .9)
+
+
+
+a
+	&:hover
+		text-decoration: none
+
+.topLine
+	padding-top: 16px
+	position: relative
+	z-index: 10
+.logo
+	display: flex
+	h2
+		margin: 0
+		margin-left: 20px
+		font-weight: 300
+		background: -webkit-linear-gradient(90deg, rgba(#0fafaf, 1) , rgba(#4694bc, 1))
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		line-height: 50px
+	nav
+		font-size: 16px;
+		font-weight: 600;		
+		line-height: 50px
+		ul
+		a
+			color: #fff
+			transition: color 0.5s ease
+			padding: 10px
+			&:hover
+				color: $accent				
+		.active
+			a
+				color: $accent
+
+.carousel
+	width: 100%
+	
+	display: flex
+	align-items: center
+	justify-content: center
+
+.line
+	width: 100px
+	border-bottom: 1px solid rgba($accent, .4)
+	margin: 30px auto
+
+.carouser-header
+	position: relative
+	height: 100%
+	.header-item
+		text-align: center		
+		h2
+			font-size: 36px
+			margin: 0
+			padding: 0
+			font-weight: 200
+		h2
+			font-size: 16px
+			font-weight: 300
+		.button
+			margin-top: 50px
+
+*
+	outline: none
+	&:focus, &:hover
+		outline: none !important
+
+.button
+	display: inline-block
+	color: $accent
+	border: 1px solid $accent
+	text-decoration: none
+	background-color: transparent;
+	padding: 15px 45px
+	font-size: 16px
+	font-family: $default-font
+	font-weight: 400
+	border-radius: 2px
+	text-align: center
+	position: relative
+	outline: none
+	transition: background-color .5s ease
+	cursor: pointer
+	&:hover
+		background-color: rgba(#000, 0.3)
+
+.carousel
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 66px;
+.owl-carousel
+	.owl-dots
+		width: 100%
+		text-align: center;
+		margin-top: 40px
+		.owl-dot
+			width: 10px
+			height: 10px
+			color: #fff
+			margin: 5px
+			background-color: #fff
+			border-radius: 10em
+			
+			&.active
+				background-color: $accent
+
+.hamburger_wrapper
+	position: fixed
+	top: 10px
+	right: -100px
+	z-index: 15
+	transition: all .5s ease
+.hamburger_wrapper.show
+	right: 10px
+.hamburger_wrapper.hide
+	right: -100px
+
+
+
+
+.mm-navbar
+	a
+		transition: color .25s ease
+		&:hover
+			color: #fff
+
+.mm-menu_theme-dark
+	--mm-color-background: rgba(80,63,118,.9) !important
+
+section, footer
+	position: relative
+
+.inverted_color
+	color: #413d4b
+
+.inverted_color
+	.button
+		font-weight: bold
+		&:hover
+			background-color: rgba(#000, 0.05)
+
+.s-wrapper
+	padding-bottom: 60px
+	padding-top: 60px
+
+.s-works
+	a
+		color: #fff
+		transition: color .5s ease
+		&:hover
+			color: $accent
+	h2
+		margin-bottom: 30px
+
+.align-self-center
+	width: 100%;
+	text-align: center;
+
+.s-exp
+	.line
+		border-bottom-color: $text
+		margin: 10px auto;	
+		margin-bottom: 30px
+	i
+		font-family: fontawesome
+		display: block
+		margin: 0 auto
+		font-size: 36px
+		background: -webkit-linear-gradient(45deg, rgba(#02ded0, 1) , rgba(#44a8cd, 1))
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	.exp-item
+		margin-bottom: 80px
+		padding: 0 30px
+		strong
+			margin: 15px 0  
+			display: block
+
+.s-review
+	.carouser-review
+		.item
+			strong
+				display: block
+
+.quote
+	&:before, &:after
+		content: '"'
+		position: absolute
+		width: 30px
+		height: 30px		
+		font-size: 56px
+		font-family: roboto, sans-serif
+	&:before
+		top: 10%
+		left: -30px
+	&:after
+		right: -30px
+		top: 10%
+		transform: rotate(180deg)			
+
+.s-callback
+	h3
+		font-size: 24px
+		font-weight: bold
+		text-align: center
+	.img_wrapper
+		width: 34%
+		padding-right: 10px
+		padding-left: 10px
+		padding-bottom: 20px
+		img
+			align-self: center
+			max-width: 100%
+	form
+		input, textarea
+			display: block
+			width: 100%
+			border: 1px solid #e5e5e5
+			padding: 8px 20px
+			margin: 10px 0
+			outline: none !important
+			&:focus, &:required, &:invalid
+				box-shadow: none !important
+				border: 1px solid #e5e5e5 !important
+		.succes
+			position: absolute
+			top: 0
+			right: 0
+			left: 0
+			bottom: 0
+			display: flex
+			z-index: 20
+			//display: none
+			span
+				margin: auto
+			& ~ *
+				transition: all .5s ease
+			&.active			
+				& ~ *
+					transition: all .5s ease
+					filter: blur(10px)
+
+footer
+	.logo
+		margin-bottom: 30px
+	p
+		text-align: justify
+
+	.map
+		width: 100%
+	.social
+		position: absolute
+		bottom: 0
+	.social a		
+		color: $text
+		background-color: #3c3c3c
+		width: 40px
+		height: 40px
+		line-height: 40px
+		border-radius: 10em
+		line-height: 40px !important
+		text-align: center
+		transition: background-color .5s ease
+		&:hover
+			color: $text
+			background-color: rgba(#3c3c3c, .5)
+
+
+// Прелоадер////////////////////////
+.preloader
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: 1000
+	background-color: #2e2a4e
+	.pulse
+		position: relative
+		left: 50%
+		top: 50vh
+		width: 80px
+		margin: 
+			left: -40px
+			top: -40px
+		&::before, &::after
+			content: ''
+			border:  5px solid $accent
+			width: 80px
+			height: 80px
+			border-radius: 10em
+			position: absolute
+		&:before
+			animation: pulse-outer .8s ease-in infinite
+		&:after
+			animation: pulse-inner .8s linear infinite
+
+@mixin opacity($opacity)
+	opacity: $opacity / 100
+	filter: alpha(opacity=$opacity)
+
+@keyframes pulse-outer
+	0%
+		@include opacity(100)
+	50%
+		@include opacity(50)
+	100%
+		@include opacity(0)
+
+@keyframes pulse-inner
+	0%
+		transform: scale(0)
+		@include opacity(0)
+	100%
+		transform: scale(1)
+		@include opacity(100)
+
+@import "media" // Always at the end
