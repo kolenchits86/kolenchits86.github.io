@@ -97,24 +97,14 @@ $(function() {
 		HamburgerShow();
 	});
 
-	function HamburgerShow(){
-		if(window.innerWidth  < 1200){
-			$('.hamburger_wrapper').addClass('show');
-			$('.hamburger_wrapper').removeClass('hide');
-		}		
-		else{
-			$('.hamburger_wrapper').addClass('hide');
-			$('.hamburger_wrapper').removeClass('show');
-		};		
-	}
-	HamburgerShow();
+
 
 	$(window).scroll(function(){
 		if($(this).scrollTop() > $(this).height()){
 			$('.hamburger_wrapper').addClass('show');
 			$('.hamburger_wrapper').removeClass('hide');
 		}
-		else if(!(window.innerWidth < 1200)){
+		else{
 			$('.hamburger_wrapper').addClass('hide');
 			$('.hamburger_wrapper').removeClass('show');
 		}
