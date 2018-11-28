@@ -4,9 +4,6 @@ $(function() {
 			$('.preloader').delay(1000).fadeOut('slow');
 		});
 
-
-
-
 		$("a[rel='m_PageScroll2id']").mPageScroll2id({
 		});
 
@@ -27,9 +24,9 @@ $(function() {
 		{
 			"position": "bottom",
 			"content": [
-			"<a class='fa fa-envelope' href='#/'></a>",
-			"<a class='fa fa-twitter' href='#/'></a>",
-			"<a class='fa fa-facebook' href='#/'></a>"
+			
+			"<a class='fa fa-envelope' href='mailto:kolenchits86@gmail.com' target='_blank'></a>",
+			"<a class='fa fa-vk' href='https://vk.com/kolenchits86' target='_blank'></a>"
 			]
 		}
 		]
@@ -109,9 +106,6 @@ $(function() {
 		// Плагин EqualHeighs
 		$('.s-exp .col-lg-4').equalHeights();	
 		$('.s-callback .img_wrapper').equalHeights();	
-
-		
-
 	}	
 	onResize();
 
